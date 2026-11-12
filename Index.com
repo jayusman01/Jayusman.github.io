@@ -1,1402 +1,653 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JAYUSMAN | Portfolio</title>
+<title>Jayusman | Personal Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="https://i.ibb.co.com/BK3DNXBT/IMG-20260513-WA0029.jpg">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<meta name="description" content="Website portofolio pribadi Jayusman, pelajar Teknik Komputer dan Jaringan serta aktivis organisasi.">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-background:
-linear-gradient(135deg,#020617,#0f172a,#1e293b);
-
-color:white;
-
-overflow-x:hidden;
-
-}
-
-/*============================*/
-
-body::before{
-
-content:'';
-
-position:fixed;
-
-width:700px;
-
-height:700px;
-
-background:#2563eb;
-
-filter:blur(250px);
-
-top:-250px;
-
-left:-250px;
-
-opacity:.35;
-
-z-index:-2;
-
-}
-
-body::after{
-
-content:'';
-
-position:fixed;
-
-width:700px;
-
-height:700px;
-
-background:#7c3aed;
-
-filter:blur(250px);
-
-bottom:-250px;
-
-right:-250px;
-
-opacity:.35;
-
-z-index:-2;
-
-}
-
-/*============================*/
-
-.container{
-
-width:90%;
-
-max-width:1200px;
-
-margin:auto;
-
-}
-
-/*============================*/
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-backdrop-filter:blur(18px);
-
-background:rgba(255,255,255,.05);
-
-border-bottom:1px solid rgba(255,255,255,.1);
-
-z-index:999;
-
-transition:.4s;
-
-}
-
-header .container{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px 0;
-
-}
-
-.logo{
-
-font-size:30px;
-
-font-weight:800;
-
-letter-spacing:3px;
-
-color:#4cc9f0;
-
-}
-
-nav ul{
-
-display:flex;
-
-list-style:none;
-
-gap:35px;
-
-}
-
-nav ul li a{
-
-text-decoration:none;
-
-color:white;
-
-font-weight:500;
-
-transition:.4s;
-
-}
-
-nav ul li a:hover{
-
-color:#4cc9f0;
-
-}
-
-/*============================*/
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-}
-
-.hero .container{
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:80px;
-
-}
-
-.hero-text{
-
-flex:1;
-
-animation:fadeLeft 1.2s;
-
-}
-
-.hero-text h4{
-
-font-size:20px;
-
-color:#4cc9f0;
-
-margin-bottom:15px;
-
-}
-
-.hero-text h1{
-
-font-size:70px;
-
-font-weight:800;
-
-margin-bottom:20px;
-
-}
-
-.hero-text h2{
-
-font-size:30px;
-
-font-weight:600;
-
-color:#cbd5e1;
-
-margin-bottom:20px;
-
-}
-
-.hero-text p{
-
-line-height:2;
-
-font-size:17px;
-
-color:#d1d5db;
-
-margin-bottom:35px;
-
-}
-
-.btn{
-
-display:inline-block;
-
-padding:15px 40px;
-
-border-radius:50px;
-
-background:linear-gradient(45deg,#2563eb,#4cc9f0);
-
-text-decoration:none;
-
-color:white;
-
-font-weight:600;
-
-transition:.4s;
-
-box-shadow:0 0 30px rgba(76,201,240,.5);
-
-}
-
-.btn:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 50px rgba(76,201,240,.8);
-
-}
-
-/*============================*/
-
-.hero-image{
-
-flex:1;
-
-display:flex;
-
-justify-content:center;
-
-animation:fadeRight 1.2s;
-
-}
-
-.hero-image img{
-
-width:380px;
-
-height:380px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-padding:8px;
-
-background:linear-gradient(45deg,#4cc9f0,#2563eb,#7c3aed);
-
-box-shadow:
-
-0 0 50px #2563eb,
-
-0 0 100px #4cc9f055;
-
-}
-
-/*============================*/
-
-section{
-
-padding:120px 0;
-
-}
-
-.title{
-
-font-size:40px;
-
-text-align:center;
-
-margin-bottom:20px;
-
-font-weight:700;
-
-}
-
-.subtitle{
-
-text-align:center;
-
-color:#cbd5e1;
-
-margin-bottom:60px;
-
-}
-
-/*============================*/
-
-.glass{
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
-
-border-radius:25px;
-
-padding:40px;
-
-box-shadow:
-
-0 15px 35px rgba(0,0,0,.3);
-
-}
-
-/*============================*/
-
-.about-content{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
-align-items:center;
-
-}
-
-.about-content p{
-
-line-height:2;
-
-color:#d1d5db;
-
-}
-
-/*============================*/
-
-.timeline{
-
-display:flex;
-
-flex-direction:column;
-
-gap:25px;
-
-}
-
-.timeline .item{
-
-display:flex;
-
-gap:20px;
-
-align-items:center;
-
-padding:20px;
-
-background:rgba(255,255,255,.05);
-
-border-radius:18px;
-
-transition:.4s;
-
-}
-
-.timeline .item:hover{
-
-transform:translateX(15px);
-
-background:rgba(37,99,235,.2);
-
-}
-
-.timeline .icon{
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:#2563eb;
-
-font-size:25px;
-
-}
-
-/*============================*/
-
-.skills{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-.skill-card{
-
-padding:30px;
-
-border-radius:20px;
-
-background:rgba(255,255,255,.05);
-
-transition:.4s;
-
-}
-
-.skill-card:hover{
-
-transform:translateY(-10px);
-
-background:rgba(76,201,240,.15);
-
-}
-
-.bar{
-
-margin-top:20px;
-
-height:12px;
-
-background:#0f172a;
-
-border-radius:50px;
-
-overflow:hidden;
-
-}
-
-.bar span{
-
-display:block;
-
-height:100%;
-
-background:linear-gradient(90deg,#2563eb,#4cc9f0);
-
-border-radius:50px;
-
-}
-
-/*============================*/
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-}
-
-.gallery img{
-
-width:100%;
-
-height:250px;
-
-object-fit:cover;
-
-border-radius:20px;
-
-transition:.4s;
-
-cursor:pointer;
-
-}
-
-.gallery img:hover{
-
-transform:scale(1.05);
-
-}
-
-/*============================*/
-
-.contact{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:30px;
-
-}
-
-.contact .card{
-
-padding:35px;
-
-text-align:center;
-
-background:rgba(255,255,255,.05);
-
-border-radius:20px;
-
-transition:.4s;
-
-}
-
-.contact .card:hover{
-
-background:#2563eb;
-
-transform:translateY(-8px);
-
-}
-
-.contact i{
-
-font-size:35px;
-
-margin-bottom:20px;
-
-}
-
-/*============================*/
-
-footer{
-
-padding:35px;
-
-text-align:center;
-
-background:rgba(255,255,255,.05);
-
-margin-top:100px;
-
-border-top:1px solid rgba(255,255,255,.1);
-
-}
-
-/*============================*/
-
-@keyframes fadeLeft{
-
-from{
-
-opacity:0;
-
-transform:translateX(-50px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateX(0);
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+:root {
+    --bg: #080f1e;
+    --card: #111d31;
+    --blue: #38bdf8;
+    --white: #ffffff;
+    --text: #b8c5d9;
 }
 
-@keyframes fadeRight{
-
-from{
-
-opacity:0;
-
-transform:translateX(50px);
-
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
-
-to{
 
-opacity:1;
+/* NAVBAR */
 
-transform:translateX(0);
-
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8,15,30,.95);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid #1e3049;
 }
 
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--blue);
 }
-
-/*============================*/
 
-/* ===========================================
-   RESPONSIVE
-=========================================== */
-
-/* Laptop Besar */
-@media (min-width:1400px){
-
-.container{
-max-width:1350px;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+    transition: .3s;
 }
 
-.hero-text h1{
-font-size:90px;
+nav a:hover {
+    color: var(--blue);
 }
 
-.hero-text h2{
-font-size:40px;
+.menu {
+    display: none;
+    font-size: 27px;
+    cursor: pointer;
 }
 
-.hero-image img{
-width:450px;
-height:450px;
-}
+/* HOME */
 
+.home {
+    min-height: 100vh;
+    padding: 130px 10% 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
 
-
-/* Laptop */
-@media (max-width:1200px){
-
-.hero-text h1{
-font-size:60px;
+.home-content {
+    max-width: 650px;
 }
 
-.hero-image img{
-width:330px;
-height:330px;
+.home-content .hello {
+    color: var(--blue);
+    font-size: 19px;
 }
 
+.home-content h1 {
+    font-size: 65px;
+    margin: 15px 0;
 }
-
-
-/* Tablet */
-@media (max-width:992px){
 
-.container{
-width:92%;
+.home-content h2 {
+    font-size: 28px;
+    color: var(--blue);
 }
 
-.hero{
-padding-top:120px;
-height:auto;
-padding-bottom:80px;
+.home-content p {
+    color: var(--text);
+    line-height: 1.9;
+    margin: 25px 0;
 }
 
-.hero .container{
-
-flex-direction:column-reverse;
-
-text-align:center;
-
-gap:50px;
-
+.profile {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    border: 5px solid var(--blue);
+    object-fit: cover;
+    box-shadow: 0 0 45px #38bdf855;
 }
-
-.hero-image img{
-
-width:280px;
-
-height:280px;
 
+.button {
+    display: inline-block;
+    padding: 13px 27px;
+    background: var(--blue);
+    color: #08111f;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
 }
 
-.hero-text h1{
-
-font-size:48px;
-
+.button:hover {
+    background: white;
+    transform: translateY(-5px);
 }
-
-.hero-text h2{
 
-font-size:24px;
+/* GENERAL SECTION */
 
+section {
+    padding: 90px 10%;
 }
 
-.hero-text p{
-
-font-size:16px;
-
+.title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
 }
-
-.about-content{
-
-grid-template-columns:1fr;
 
+.title span {
+    color: var(--blue);
 }
 
-.about-content img{
+/* ABOUT */
 
-margin-top:30px;
-
+.about {
+    background: #0d192b;
 }
-
-.skills{
-
-grid-template-columns:repeat(2,1fr);
 
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
 }
 
-.gallery{
-
-grid-template-columns:repeat(2,1fr);
-
+.about-content p {
+    color: var(--text);
+    line-height: 2;
+    font-size: 16px;
 }
-
-.contact{
-
-grid-template-columns:1fr;
 
-}
+/* SKILLS */
 
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+    gap: 22px;
 }
-
-
-/* Mobile */
-@media (max-width:768px){
 
-header .container{
-
-padding:18px;
-
+.skill-card {
+    background: var(--card);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #263b55;
+    transition: .3s;
 }
-
-.logo{
-
-font-size:24px;
 
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
 }
 
-nav{
-
-display:none;
-
+.skill-card .icon {
+    font-size: 35px;
+    margin-bottom: 15px;
 }
-
-.hero{
 
-padding-top:120px;
-
+.skill-card h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
 }
-
-.hero-image img{
-
-width:220px;
-
-height:220px;
 
+.skill-card p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.7;
 }
 
-.hero-text h4{
+/* EXPERIENCE */
 
-font-size:16px;
-
+.experience {
+    background: #0d192b;
 }
-
-.hero-text h1{
-
-font-size:38px;
 
+.experience-container {
+    max-width: 850px;
+    margin: auto;
 }
 
-.hero-text h2{
-
-font-size:20px;
-
+.experience-card {
+    background: var(--card);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--blue);
+    border-radius: 10px;
+    transition: .3s;
 }
-
-.hero-text p{
-
-font-size:15px;
 
-line-height:1.8;
-
+.experience-card:hover {
+    transform: translateX(7px);
 }
-
-.btn{
-
-padding:14px 28px;
 
-font-size:14px;
-
+.experience-card h3 {
+    color: var(--blue);
+    margin-bottom: 8px;
 }
-
-section{
 
-padding:80px 0;
-
+.experience-card p {
+    color: var(--text);
+    line-height: 1.7;
 }
-
-.title{
 
-font-size:32px;
+/* EDUCATION */
 
+.education-container {
+    max-width: 750px;
+    margin: auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #263b55;
 }
 
-.subtitle{
-
-font-size:15px;
-
-margin-bottom:35px;
-
+.education-container h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
 }
 
-.glass{
-
-padding:25px;
-
+.education-container p {
+    color: var(--text);
+    line-height: 1.8;
 }
-
-.timeline .item{
-
-flex-direction:column;
 
-text-align:center;
+/* PROJECT */
 
+.project {
+    background: #0d192b;
 }
 
-.timeline .icon{
-
-margin-bottom:10px;
-
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 25px;
 }
-
-.skills{
 
-grid-template-columns:1fr;
-
+.project-card {
+    background: var(--card);
+    padding: 28px;
+    border-radius: 15px;
+    transition: .3s;
 }
-
-.gallery{
 
-grid-template-columns:1fr;
-
+.project-card:hover {
+    transform: translateY(-8px);
 }
-
-.gallery img{
 
-height:220px;
-
+.project-card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
 }
-
-.contact{
-
-grid-template-columns:1fr;
 
+.project-card p {
+    color: var(--text);
+    line-height: 1.8;
 }
 
-footer{
+/* CONTACT */
 
-font-size:14px;
-
-padding:25px;
-
+.contact-content {
+    text-align: center;
 }
 
+.contact-content p {
+    color: var(--text);
+    margin-bottom: 25px;
 }
-
-
-/* HP Kecil */
-@media (max-width:480px){
 
-.hero-text h1{
-
-font-size:32px;
-
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-
-.hero-text h2{
 
-font-size:18px;
-
+.contact-links a {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    transition: .3s;
 }
-
-.hero-image img{
-
-width:180px;
-
-height:180px;
 
+.contact-links a:hover {
+    background: var(--blue);
+    color: var(--bg);
 }
 
-.title{
+/* FOOTER */
 
-font-size:28px;
-
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #050a13;
+    color: #8fa1b9;
+    line-height: 1.8;
 }
 
-.subtitle{
+/* ANIMATION */
 
-font-size:14px;
-
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .8s;
 }
-
-.about-content p{
 
-font-size:14px;
-
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.skill-card{
+/* RESPONSIVE */
 
-padding:20px;
+@media(max-width: 768px) {
 
-}
+    header {
+        padding: 18px 6%;
+    }
 
-.contact .card{
+    .menu {
+        display: block;
+    }
 
-padding:25px;
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111d31;
+        padding: 20px;
+    }
 
-}
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
 
-#topBtn{
+    nav a {
+        margin: 13px 0;
+    }
 
-width:45px;
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 130px;
+    }
 
-height:45px;
+    .home-content h1 {
+        font-size: 43px;
+    }
 
-font-size:16px;
+    .home-content h2 {
+        font-size: 22px;
+    }
 
-right:15px;
+    .profile {
+        width: 220px;
+        height: 220px;
+    }
 
-bottom:15px;
+    section {
+        padding: 75px 7%;
+    }
 
-}
+    .title {
+        font-size: 30px;
+    }
 }
 </style>
-
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+
 <header>
 
-    <div class="container">
+    <div class="logo">JAYUSMAN.</div>
 
-        <div class="logo">JAYUSMAN</div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
 
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#journey">Pramuka</a></li>
-                <li><a href="#skill">Kemampuan</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-
-    </div>
+    <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
 </header>
 
-<!-- HERO -->
+<!-- HOME -->
 
-<section class="hero" id="home">
+<section class="home" id="home">
 
-<div class="container">
+    <div class="home-content">
 
-<div class="hero-text">
+        <div class="hello">HELLO, I'M</div>
 
-<h4>Hallo, Saya</h4>
+        <h1>Jayusman</h1>
 
-<h1>JAYUSMAN</h1>
+        <h2>IT Enthusiast & Organization Leader</h2>
 
-<h2>Pramuka Penegak Laksana</h2>
+        <p>
+            Saya adalah pelajar SMK jurusan Teknik Komputer
+            dan Jaringan yang memiliki ketertarikan dalam
+            bidang teknologi informasi, konfigurasi jaringan,
+            serta kepemimpinan organisasi.
+        </p>
 
-<p>
+        <a href="#about" class="button">
+            Explore My Profile
+        </a>
 
-"Menjadi seorang Pramuka bukan hanya tentang mengenakan seragam, tetapi
-tentang membangun karakter, menjunjung tinggi Tri Satya dan Dasa Dharma,
-serta siap mengabdi kepada agama, bangsa, negara, dan masyarakat."
+    </div>
 
-<br><br>
-
-Saya merupakan pelajar di
-<b>SMK Bangun Bangsa Mandiri Kandanghaur</b>
-yang memiliki semangat untuk terus belajar,
-berorganisasi, disiplin, bertanggung jawab,
-serta mengembangkan kemampuan diri melalui kegiatan kepramukaan.
-
-</p>
-
-<a href="#about" class="btn">
-Tentang Saya
-</a>
-
-</div>
-
-<div class="hero-image">
-
-<img src="https://i.ibb.co.com/BK3DNXBT/IMG-20260513-WA0029.jpg" alt="Profile">
-
-</div>
-
-</div>
+    <img src="foto.jpg"
+         alt="Foto Jayusman"
+         class="profile">
 
 </section>
 
 <!-- ABOUT -->
 
-<section id="about">
+<section class="about" id="about">
 
-<div class="container">
+    <h2 class="title">About <span>Me</span></h2>
 
-<h2 class="title">Tentang Saya</h2>
+    <div class="about-content reveal">
 
-<p class="subtitle">
-Mengenal lebih dekat tentang diri saya
-</p>
+        <p>
+            Perkenalkan, nama saya Jayusman.
+            Saya berasal dari Indramayu dan merupakan
+            pelajar SMK Bangun Bangsa Mandiri Kandanghaur,
+            jurusan Teknik Komputer dan Jaringan (TKJ).
 
-<div class="glass">
+            Saya memiliki minat dalam bidang teknologi
+            informasi, khususnya jaringan komputer,
+            konfigurasi perangkat jaringan, dan fiber optik.
 
-<div class="about-content">
+            Selain bidang teknologi, saya juga aktif dalam
+            kegiatan organisasi dan kepramukaan.
+            Melalui berbagai pengalaman tersebut, saya
+            terus mengembangkan kemampuan kepemimpinan,
+            kedisiplinan, komunikasi, dan tanggung jawab.
+        </p>
 
-<div>
-
-<h2 style="margin-bottom:20px;color:#4cc9f0;">
-JAYUSMAN
-</h2>
-
-<p>
-
-Saya adalah seorang pelajar aktif di
-<b>SMK Bangun Bangsa Mandiri Kandanghaur</b>
-yang memiliki ketertarikan terhadap organisasi,
-kepemimpinan, dan pengembangan karakter.
-
-<br><br>
-
-Kepramukaan menjadi salah satu perjalanan hidup
-yang membentuk pribadi saya menjadi lebih disiplin,
-mandiri, bertanggung jawab, dan mampu bekerja sama
-dalam setiap keadaan.
-
-<br><br>
-
-Sebagai seorang
-<b>Pramuka Penegak Laksana</b>,
-saya percaya bahwa setiap tantangan merupakan kesempatan
-untuk belajar dan berkembang menjadi pribadi
-yang lebih baik.
-
-<br><br>
-saya mejabat sebagai <b>pradana putra</b>di SMK Bangun bangsa 
-mandiri kandanghaur,dan saya juga menjabat sebagai <b>bendahara
-Ipnu pac kroya</b>
-
-</p>
-
-</div>
-
-<div>
-
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900"
-style="width:100%;border-radius:20px;">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-    <section id="about">
+<!-- SKILLS -->
 
-<div class="container">
+<section id="skills">
 
-<h2 class="title">Perjalanan Pramuka</h2>
+    <h2 class="title">My <span>Skills</span></h2>
 
-<p class="subtitle">
-Mengenal lebih dekat tentang Perjalanan Pramuka Saya
-</p>
+    <div class="skills-container">
 
-<div class="glass">
+        <div class="skill-card reveal">
+            <div class="icon">🌐</div>
+            <h3>Networking</h3>
+            <p>Dasar jaringan komputer dan instalasi jaringan.</p>
+        </div>
 
-<div class="about-content">
+        <div class="skill-card reveal">
+            <div class="icon">⚙️</div>
+            <h3>Configuration</h3>
+            <p>Konfigurasi dan pengaturan perangkat jaringan.</p>
+        </div>
 
-<div>
+        <div class="skill-card reveal">
+            <div class="icon">🔌</div>
+            <h3>Fiber Optic</h3>
+            <p>Pengenalan, penyambungan, dan pengujian fiber optik.</p>
+        </div>
 
-<h2 style="margin-bottom:20px;color:#4cc9f0;">
-JAYUSMAN
-</h2>
+        <div class="skill-card reveal">
+            <div class="icon">💻</div>
+            <h3>Computer</h3>
+            <p>Dasar perawatan dan troubleshooting komputer.</p>
+        </div>
 
-<p>
+        <div class="skill-card reveal">
+            <div class="icon">🏕️</div>
+            <h3>Scouting</h3>
+            <p>Kepemimpinan, kedisiplinan, dan kepramukaan.</p>
+        </div>
 
-Perjalanan saya di dunia kepramukaan dimulai
-    sejak duduk di bangku <b>MI Miftahul Barokah</b>,
-    di mana saya aktif mengikuti kegiatan Pramuka
-    selama 3 tahun. Selama masa tersebut, saya belajar
-    tentang kedisiplinan, kerja sama, tanggung jawab,
-    serta semangat pantang menyerah.
+        <div class="skill-card reveal">
+            <div class="icon">🤝</div>
+            <h3>Leadership</h3>
+            <p>Kerja sama, komunikasi, dan tanggung jawab organisasi.</p>
+        </div>
 
-<br><br>
-
-Setelah lulus, saya melanjutkan perjalanan kepramukaan
-    di <b>MTs HIDAYATUL MA'ARIF TEMIYANG</b> dan kembali aktif selama 3 tahun.
-    Berkat kepercayaan yang diberikan oleh pembina dan teman-teman,
-    saya mendapat amanah sebagai <b>Pratama</b> selama 1 tahun. Jabatan ini
-    mengajarkan saya untuk menjadi pemimpin yang bertanggung jawab,
-    mampu mengambil keputusan, serta menjadi teladan bagi anggota lainnya.
-<br><br>
-
-Saat ini, saya melanjutkan kegiatan kepramukaan di <b>SMK Bangun Bangsa Mandiri</b>.
-    Saya kembali dipercaya untuk mengemban amanah sebagai <b>Pradana</b>.
-    Tanggung jawab ini menjadi motivasi bagi saya untuk terus
-    mengembangkan kemampuan kepemimpinan, memperkuat kerja sama
-    dalam organisasi, serta mengabdikan diri demi kemajuan Gerakan Pramuka di sekolah.
-
-
-</p>
-
-</div>
-
-<div>
-
-<img src="https://i.ibb.co.com/LhvRd3Dy/IMG-20260422-WA0005-1.jpg"
-style="width:100%;border-radius:20px;">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- TIMELINE -->
+<!-- EXPERIENCE -->
 
-<section id="journey">
+<section class="experience" id="experience">
 
-<div class="container">
+    <h2 class="title">My <span>Experience</span></h2>
 
-<h2 class="title">
-Perjalanan Kepramukaan
-</h2>
+    <div class="experience-container">
 
-<p class="subtitle">
-Proses pembelajaran dalam Gerakan Pramuka
-</p>
+        <div class="experience-card reveal">
+            <h3>Praktik Kerja Lapangan (PKL)</h3>
+            <p>
+                Mengembangkan pengalaman kerja dan keterampilan
+                teknis di bidang teknologi informasi dan
+                jaringan komputer.
+            </p>
+        </div>
 
-<div class="timeline">
+        <div class="experience-card reveal">
+            <h3>Pratama Putra</h3>
+            <p>
+                Pengalaman kepemimpinan dalam kegiatan
+                kepramukaan tingkat Penggalang.
+            </p>
+        </div>
 
-<div class="item">
+        <div class="experience-card reveal">
+            <h3>Pradana Putra</h3>
+            <p>
+                Mengembangkan kepemimpinan, koordinasi,
+                kedisiplinan, dan tanggung jawab dalam
+                organisasi Ambalan Pramuka.
+            </p>
+        </div>
 
-<div class="icon">
-<i class="fas fa-seedling"></i>
-</div>
+        <div class="experience-card reveal">
+            <h3>Bendahara IPNU PAC Kroya</h3>
+            <p>
+                Berperan dalam bidang pengelolaan keuangan
+                dan administrasi organisasi.
+            </p>
+        </div>
 
-<div>
+        <div class="experience-card reveal">
+            <h3>Anggota KNPI PAC Kroya</h3>
+            <p>
+                Berpartisipasi dalam kegiatan organisasi
+                kepemudaan dan pengembangan potensi generasi muda.
+            </p>
+        </div>
 
-<h3>Siaga</h3>
-
-<p>
-Belajar kemandirian, keberanian, serta mengenal
-dasar-dasar kepramukaan.
-</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="icon">
-<i class="fas fa-users"></i>
-</div>
-
-<div>
-
-<h3>Penggalang</h3>
-
-<p>
-Belajar kerja sama, kepemimpinan,
-dan semangat gotong royong.
-</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="icon">
-<i class="fas fa-campground"></i>
-</div>
-
-<div>
-
-<h3>Penegak Bantara</h3>
-
-<p>
-Mengembangkan kemampuan organisasi,
-pengabdian serta tanggung jawab
-sebagai generasi muda.
-</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="icon">
-<i class="fas fa-award"></i>
-</div>
-
-<div>
-
-<h3>Penegak Laksana</h3>
-
-<p>
-
-Tahap yang mengajarkan kepemimpinan,
-pengabdian kepada masyarakat,
-serta menjadi teladan bagi sesama anggota Pramuka.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- SKILL -->
+<!-- EDUCATION -->
 
-<section id="skill">
+<section id="education">
 
-<div class="container">
+    <h2 class="title">My <span>Education</span></h2>
 
-<h2 class="title">
-Kemampuan
-</h2>
+    <div class="education-container reveal">
 
-<p class="subtitle">
-Karakter yang terus saya kembangkan
-</p>
+        <h3>SMK Bangun Bangsa Mandiri Kandanghaur</h3>
 
-<div class="skills">
+        <p>
+            Jurusan: Teknik Komputer dan Jaringan (TKJ)
+        </p>
 
-<div class="skill-card">
+        <p>
+            Fokus pembelajaran:
+            Jaringan komputer, konfigurasi jaringan,
+            perangkat komputer, dan fiber optik.
+        </p>
 
-<h3>Leadership</h3>
-
-<div class="bar">
-<span style="width:99%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Disiplin</h3>
-
-<div class="bar">
-<span style="width:95%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Kerja Sama</h3>
-
-<div class="bar">
-<span style="width:99%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Tanggung Jawab</h3>
-
-<div class="bar">
-<span style="width:98%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Komunikasi</h3>
-
-<div class="bar">
-<span style="width:99%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Public Speaking</h3>
-
-<div class="bar">
-<span style="width:80%"></span>
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- GALERI -->
+<!-- PROJECT -->
 
-<section id="gallery">
+<section class="project" id="project">
 
-<div class="container">
+    <h2 class="title">My <span>Projects</span></h2>
 
-<h2 class="title">
-Galeri
-</h2>
+    <div class="project-container">
 
-<p class="subtitle">
-Beberapa dokumentasi kegiatan
-</p>
+        <div class="project-card reveal">
+            <h3>Personal Portfolio</h3>
+            <p>
+                Pengembangan website portofolio pribadi
+                menggunakan HTML, CSS, dan JavaScript.
+            </p>
+        </div>
 
-<div class="gallery">
+        <div class="project-card reveal">
+            <h3>Fiber Optic Network</h3>
+            <p>
+                Pembelajaran dan praktik pengujian
+                redaman jaringan fiber optik.
+            </p>
+        </div>
 
-<img src="https://i.ibb.co.com/Z6Ty4kTM/IMG-20260628-144009.jpg">
+        <div class="project-card reveal">
+            <h3>Network Configuration</h3>
+            <p>
+                Pembelajaran konfigurasi dan pengelolaan
+                jaringan komputer.
+            </p>
+        </div>
 
-<img src="https://i.ibb.co.com/ksbRn87d/IMG-20260427-WA0047-1.jpg">
-
-<img src="https://i.ibb.co.com/LhvRd3Dy/IMG-20260422-WA0005-1.jpg">
-
-<img src="https://i.ibb.co.com/SDdTCc2t/IMG-20260418-WA0082-1.jpg">
-
-<img src="https://i.ibb.co.com/SDdTCc2t/IMG-20260418-WA0082-1.jpg">
-
-<img src="https://picsum.photos/500/400?6">
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -1404,381 +655,79 @@ Beberapa dokumentasi kegiatan
 
 <section id="contact">
 
-<div class="container">
+    <h2 class="title">Contact <span>Me</span></h2>
 
-<h2 class="title">
-Kontak
-</h2>
+    <div class="contact-content">
 
-<p class="subtitle">
-Mari terhubung
-</p>
+        <p>
+            Terima kasih telah mengunjungi portofolio saya.
+            Mari terhubung dan berbagi pengalaman.
+        </p>
 
-<div class="contact">
+        <div class="contact-links">
 
-<div class="card">
+            <!-- GANTI LINK DENGAN AKUN MILIKMU -->
 
-<i class="fas fa-school"></i>
+            <a href="https://wa.me/083197356237">
+                WhatsApp
+            </a>
 
-<h3>Sekolah</h3>
+            <a href="https://instagram.com/username">
+                Instagram
+            </a>
 
-<p>
-SMK Bangun Bangsa Mandiri
-Kandanghaur
-</p>
+            <a href="email:manjayus209@gmail.com">
+                Email
+            </a>
 
-</div>
+        </div>
 
-<div class="card">
-
-<i class="fa-solid fa-arrows-down-to-people"></i>
-
-<h3>Organisasi</h3>
-
-<p>
--Gerakan Pramuka
-</p>
- <p>
--OSIS
- </p>
-<p>
--ipnu pac kroya
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-envelope"></i>
-
-<h3>Email</h3>
-
-<p>
-manjayus665@email.com
-</p>
-
-</div>
-   <div class="card">
-<a href="https://www.instagram.com/jyusmn?igsh=MXI3bGRpdDFvcnZqOQ==" style="text-decoration:none; color:white;">
-<i class="fa-brands fa-instagram"></i>
-
-<h3>Instagram</h3>
-
-<p>
-jyusmn
-</p>
-</a>
-</div> 
-    <div class="card">
-<a href="https://www.tiktok.com/@j___uzz?_r=1&_d=
-    ejh6l3i818l857&sec_uid=MS4wLjABAAAAU2X-FJ5LZXnfP8JuOm_2Ao4ZShvdd6_yrtzD-bKcTBXGE-d1qhsDeSMXqPvAe0t0&share_author_id=
-    7551612513608188946&sharer_language=id&source=h5_t&u_code=emde8a5amli104&timestamp=1783760661&user_id=
-    7551612513608188946&sec_user_id=MS4wLjABAAAAU2X-FJ5LZXnfP8JuOm_2Ao4ZShvdd6_yrtzD-bKcTBXGE-d1qhsDeSMXqPvAe0t0&item_author_type=1&utm_source=
-    whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7659311080753776392&share_link_id=
-    56ac69f8-7372-470b-bf51-a0297481da54&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=
-    b8727%2Cb4907&social_share_type=5&share_enter_from=settings_page&item_author_type=1&enable_checksum=1" style="text-decoration:none; color:white;">
-<i class="fa-brands fa-tiktok"></i>
-
-<h3>Tiktok</h3>
-
-<p>
-j___uzz
-</p>
-</a>
-   </div>
-     <div class="card">
-    
-<i class="fa-brands fa-whatsapp"></i>
-<a href="https://wa.me/qr/DTH67QJAVVAUO1" style="text-decoration:none; color:white;">
-<h3>WhatsApp</h3>
-
-<p>
-0831-6608-1348
-</p>
-</a>
     </div>
-</div>
-
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
-<p>
+    <p>© 2026 Jayusman | Personal Portfolio</p>
 
-© 2026 JAYUSMAN
-
-<br>
-
-Pramuka Penegak Laksana •
-SMK Bangun Bangsa Mandiri Kandanghaur
-
-</p>
+    <p>Designed & Developed by Jayusman</p>
 
 </footer>
-<!-- BACK TO TOP -->
-
-<button id="topBtn">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<style>
-
-/*============================*/
-/* BACK TO TOP */
-/*============================*/
-
-#topBtn{
-
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-width:55px;
-
-height:55px;
-
-border:none;
-
-border-radius:50%;
-
-background:linear-gradient(45deg,#2563eb,#4cc9f0);
-
-color:white;
-
-font-size:20px;
-
-cursor:pointer;
-
-display:none;
-
-z-index:9999;
-
-box-shadow:0 0 25px rgba(76,201,240,.5);
-
-transition:.3s;
-
-}
-
-#topBtn:hover{
-
-transform:translateY(-6px) scale(1.08);
-
-box-shadow:0 0 45px rgba(76,201,240,.8);
-
-}
-
-.reveal{
-
-opacity:0;
-
-transform:translateY(60px);
-
-transition:1s;
-
-}
-
-.reveal.active{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-</style>
 
 <script>
 
-/*==============================*/
-/* Navbar Scroll */
-/*==============================*/
+// MENU MOBILE
 
-const header=document.querySelector("header");
+function toggleMenu() {
 
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>60){
-
-header.style.background="rgba(2,6,23,.85)";
-
-header.style.backdropFilter="blur(18px)";
-
-header.style.boxShadow="0 10px 30px rgba(0,0,0,.4)";
-
-}else{
-
-header.style.background="rgba(255,255,255,.05)";
-
-header.style.boxShadow="none";
+    document.getElementById("navbar")
+    .classList.toggle("active");
 
 }
 
-});
+// ANIMATION SCROLL
 
-/*==============================*/
-/* Back To Top */
-/*==============================*/
+const observer = new IntersectionObserver((entries) => {
 
-const topBtn=document.getElementById("topBtn");
+    entries.forEach(entry => {
 
-window.addEventListener("scroll",()=>{
+        if(entry.isIntersecting) {
 
-if(window.scrollY>400){
+            entry.target.classList.add("show");
 
-topBtn.style.display="block";
+        }
 
-}else{
+    });
 
-topBtn.style.display="none";
+}, { threshold: 0.15 });
 
-}
+document.querySelectorAll(".reveal").forEach(element => {
 
-});
-
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
+    observer.observe(element);
 
 });
-
-};
-
-/*==============================*/
-/* Reveal Animation */
-/*==============================*/
-
-const revealElements=document.querySelectorAll(
-
-"section,.glass,.skill-card,.item,.gallery img,.card"
-
-);
-
-revealElements.forEach(el=>{
-
-el.classList.add("reveal");
-
-});
-
-function reveal(){
-
-const reveals=document.querySelectorAll(".reveal");
-
-for(let i=0;i<reveals.length;i++){
-
-let windowHeight=window.innerHeight;
-
-let revealTop=reveals[i].getBoundingClientRect().top;
-
-let revealPoint=120;
-
-if(revealTop<windowHeight-revealPoint){
-
-reveals[i].classList.add("active");
-
-}
-
-}
-
-}
-
-window.addEventListener("scroll",reveal);
-
-reveal();
-
-/*==============================*/
-/* Active Menu */
-/*==============================*/
-
-const sections=document.querySelectorAll("section");
-
-const navLinks=document.querySelectorAll("nav ul li a");
-
-window.addEventListener("scroll",()=>{
-
-let current="";
-
-sections.forEach(section=>{
-
-const sectionTop=section.offsetTop-120;
-
-const sectionHeight=section.clientHeight;
-
-if(pageYOffset>=sectionTop){
-
-current=section.getAttribute("id");
-
-}
-
-});
-
-navLinks.forEach(link=>{
-
-link.classList.remove("active");
-
-if(link.getAttribute("href")==="#"+current){
-
-link.classList.add("active");
-
-}
-
-});
-
-});
-
-/*==============================*/
-/* Smooth Hover */
-/*==============================*/
-
-document.querySelectorAll("nav a").forEach(link=>{
-
-link.addEventListener("mouseenter",()=>{
-
-link.style.transform="translateY(-2px)";
-
-});
-
-link.addEventListener("mouseleave",()=>{
-
-link.style.transform="translateY(0)";
-
-});
-
-});
-
-/*==============================*/
-/* Typing Effect */
-/*==============================*/
-
-const title=document.querySelector(".hero-text h2");
-
-const text=title.innerHTML;
-
-title.innerHTML="";
-
-let i=0;
-
-function typing(){
-
-if(i<text.length){
-
-title.innerHTML+=text.charAt(i);
-
-i++;
-
-setTimeout(typing,70);
-
-}
-
-}
-
-typing();
 
 </script>
 
